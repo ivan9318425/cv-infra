@@ -1,0 +1,65 @@
+/* Controla el tamaño de la imagen para que no empuje el contenedor */
+.ivan-logo-link img {
+    height: 45px;       /* Ajusta este alto para controlar el tamaño de tu logo */
+    width: auto;        /* Mantiene la proporción perfecta */
+    display: block;
+}
+
+/* Contenedor de las dos columnas de contacto */
+.contact-header-container {
+    display: flex;
+}
+
+/* Cada bloque individual (Label arriba, Valor abajo) */
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* "Write Me" / "Call Me" */
+.contact-label {
+    font-size: 0.75rem;
+    color: #8c8c8c;
+    margin-bottom: 2px;
+    font-family: sans-serif;
+    line-height: 1;
+}
+
+/* Los datos de contacto con la tipografía mono de la imagen_3.png */
+.contact-value {
+    font-size: 1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.contact-value:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Estilo base para todos los enlaces del menú */
+.nav-link-custom, .active-custom {
+    font-family: 'Courier New', Courier, monospace; /* Tipografía idéntica a imagen_4.png */
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4a5568 !important; /* Gris elegante para los links inactivos */
+    padding: 0.3rem 0.8rem !important;
+    transition: all 0.2s ease;
+}
+
+/* Estilo exclusivo para la pestaña activa (About Me) */
+.active-custom {
+    color: #ffffff !important;       /* Texto blanco */
+    background-color: #007bff;      /* Fondo azul brillante idéntico a la imagen */
+    border-radius: 2px;             /* Bordes ligeramente redondeados/rectos */
+}
+
+/* Efecto hover sutil para los links que no están activos */
+.nav-link-custom:hover {
+    color: #007bff !important;      /* Se vuelven azules al pasar el mouse */
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/cv.css">
+    <title>CV</title>
+</head>
+
+<body>
+
+    <!--Header 
+    part where im putting my name and number
+    -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    
+    <!-- LADO IZQUIERDO: Tu logo/imagen -->
+    <a class="navbar-brand ivan-logo-link m-0 p-0" href="#">
+      <img src="/static/img/ivan_cloud_admin.png" alt="Ivan Lopez Cloud Support & Sysadmin">
+    </a>
+   
+    <!-- LADO DERECHO: Bloque de contactos alineado horizontalmente -->
+    <div class="contact-header-container d-flex align-items-center">
+      <!-- Columna 1: Email -->
+      <div class="contact-column me-5">
+        <span class="contact-label">Write Me</span>
+        <a href="mailto:tu-correo@email.com" class="contact-value">tu-correo@email.com</a>
+      </div>
+      
+      <!-- Columna 2: Teléfono -->
+      <div class="contact-column">
+        <span class="contact-label">Call Me</span>
+        <a href="tel:+12345678900" class="contact-value">+1 (234) 567 89 00</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!--
+Section where im going to put the about me, contact me section
+-->
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <!-- Cambiamos a justify-content-center para que todo el bloque se mueva al medio -->
+  <div class="container-fluid d-flex justify-content-center">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Añadimos flex-grow-0 para que el contenedor ocupe solo el ancho de sus elementos y se centre perfectamente -->
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarText">
+      <!-- Cambiamos 'me-auto' por 'mx-auto' (márgenes automáticos a los lados) y añadimos un gap para separar los links -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+        
+        <!-- "About Me" ahora forma parte de la lista con estilo activo tipo imagen_4.png -->
+        <li class="nav-item">
+          <a class="nav-link active-custom" aria-current="page" href="#">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Contact me</a>
+        </li>
+        
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
