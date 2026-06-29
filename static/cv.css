@@ -198,3 +198,45 @@ body {
         height: 260px;
     }
 }
+/* ==========================================================================
+   6. SECCIÓN "ABOUT ME" (ESTILIZADA)
+   ========================================================================== */
+.about-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px !important; /* Ajuste para que coincida con el estilo minimalista */
+    background-color: var(--bg-principal);
+    border: 1px solid var(--divisores) !important; /* Borde sutil en lugar de sombra pesada */
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.08) !important;
+}
+
+.about-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    letter-spacing: 0.5px;
+    font-family: 'Courier New', Courier, monospace; /* Mantiene la consistencia con tus otros títulos */
+}
+
+.about-card .card-text {
+    font-size: 1rem;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+}
+
+/* Ajuste para la imagen al 50% */
+.about-card img {
+    width: 100%;       /* Asegura que llene su columna */
+    height: 250px;     /* Define una altura fija para mantener la simetría */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    border-radius: 8px;
+}
+
+/* Añade esto a tu CSS para dar espacio arriba y abajo de la tarjeta */
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
