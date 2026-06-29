@@ -2,11 +2,12 @@
    1. VARIABLES DE LA PALETA "CYBER MINT"
    ========================================================================== */
 :root {
-    --bg-principal: #fafafa;       /* Blanco lino suave para el fondo general */
-    --bg-secundario: #f4f4f5;     /* Gris claro neutro para bloques o bordes */
-    --texto-principal: #18181b;   /* Grafito oscuro elegante para títulos */
-    --texto-secundario: #71717a;  /* Gris ceniza atenuado para subtítulos y labels */
-    --acento-tech: #059669;       /* Verde Esmeralda Digital (El toque informático) */
+  --bg-principal: #FAFAFA;     /* Blanco roto, fondo de la web */
+  --bg-secundario: #E2E8F0;    /* Mapeado a divisores para consistencia */
+  --texto-principal: #0F172A;  /* Gris pizarra casi negro para títulos */
+  --texto-secundario: #64748B; /* Gris slate para subtítulos y textos largos */
+  --acento-tech: #0D9488;      /* Verde esmeralda oscuro/Teal para elementos clave */
+  --divisores: #E2E8F0;        /* Gris muy fino para líneas o bordes sutiles */
 }
 
 /* Base del cuerpo */
@@ -21,7 +22,7 @@ body {
 }
 
 .border-bottom-custom {
-    border-bottom: 1px solid var(--bg-secundario);
+    border-bottom: 1px solid var(--divisores);
 }
 
 /* ==========================================================================
@@ -126,7 +127,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Botón Minimalista (Copia exacta de Adam) */
+/* Botón Minimalista */
 .hero-btn {
     color: var(--texto-principal);
     background-color: transparent;
@@ -145,7 +146,7 @@ body {
     color: #ffffff;
     background-color: var(--acento-tech);
     border-color: var(--acento-tech);
-    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.2);
+    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.2);
 }
 
 /* Contenedor de la columna derecha para centrar el círculo */
@@ -153,15 +154,15 @@ body {
     min-height: 500px;
 }
 
-/* Máscara Circular: Elimina la visualización de los bordes del fondo */
+/* Máscara Circular */
 .hero-img-wrapper {
     width: 360px;                  
     height: 360px;                 
     border-radius: 50%;            
     overflow: hidden;              
-    border: 4px solid var(--bg-secundario); 
+    border: 4px solid var(--divisores); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
-    background-color: var(--bg-secundario);     
+    background-color: var(--divisores);     
 }
 
 /* Ajuste del zoom y la posición interna de tu foto */
@@ -169,13 +170,13 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;             
-    object-position: center 22%;   /* Mueve tu encuadre ligeramente hacia arriba */
-    transform: scale(1.6);         /* Hace el zoom directo hacia ti eliminando espacio de fondo muerto */
+    object-position: center 22%;   
+    transform: scale(1.6);         
     transition: transform 0.3s ease;
 }
 
 .hero-img-wrapper:hover .hero-img-avatar {
-    transform: scale(1.68);        /* Pequeño efecto dinámico al pasar el mouse */
+    transform: scale(1.68);        
 }
 
 /* ==========================================================================
