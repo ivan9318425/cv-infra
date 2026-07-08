@@ -1,309 +1,71 @@
-/* ==========================================================================
-   1. VARIABLES DE LA PALETA "CYBER MINT"
-   ========================================================================== */
 :root {
-  --bg-principal: #FAFAFA;     /* Blanco roto, fondo de la web */
-  --bg-secundario: #E2E8F0;    /* Mapeado a divisores para consistencia */
-  --texto-principal: #0F172A;  /* Gris pizarra casi negro para títulos */
-  --texto-secundario: #64748B; /* Gris slate para subtítulos y textos largos */
-  --acento-tech: #0D9488;      /* Verde esmeralda oscuro/Teal para elementos clave */
-  --divisores: #E2E8F0;        /* Gris muy fino para líneas o bordes sutiles */
+  --bg-principal: #FAFAFA;
+  --bg-card: #F1F5F9;
+  --texto-principal: #0F172A;
+  --texto-secundario: #64748B;
+  --acento-tech: #0D9488;
+  --divisores: #E2E8F0;
 }
 
-/* Base del cuerpo */
 body {
-    background-color: var(--bg-principal);
-    color: var(--texto-principal);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  line-height: 1.6;
 }
 
-/* Fuerza el fondo de las barras de navegación al color de tu paleta */
-.nav-bg-custom {
-    background-color: var(--bg-principal) !important;
-}
+/* Navegación */
+.nav-bg-custom { background-color: var(--bg-principal); }
+.border-bottom-custom { border-bottom: 1px solid var(--divisores); }
 
-.border-bottom-custom {
-    border-bottom: 1px solid var(--divisores);
-}
+.contact-label { font-size: 0.75rem; color: var(--texto-secundario); text-transform: uppercase; }
+.contact-value { font-family: monospace; font-weight: bold; color: var(--texto-principal); text-decoration: none; }
+.contact-value:hover { color: var(--acento-tech); }
 
-/* ==========================================================================
-   2. LOGO Y COMPONENTES DE ENCABEZADO
-   ========================================================================== */
-/* Controla el tamaño de la imagen del logo */
-.ivan-logo-link img {
-    height: 45px;       
-    width: auto;        
-    display: block;
-}
-
-/* Contenedor de las dos columnas de contacto */
-.contact-header-container {
-    display: flex;
-}
-
-/* Cada bloque individual (Label arriba, Valor abajo) */
-.contact-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* "Write Me" / "Call Me" */
-.contact-label {
-    font-size: 0.75rem;
-    color: var(--texto-secundario);
-    margin-bottom: 2px;
-    font-family: sans-serif;
-    line-height: 1;
-}
-
-/* Los datos de contacto con la tipografía mono */
-.contact-value {
-    font-size: 1rem;
-    color: var(--texto-principal);
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    line-height: 1.2;
-    transition: color 0.2s ease;
-}
-
-.contact-value:hover {
-    color: var(--acento-tech);
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   3. MENÚ DE NAVEGACIÓN (NAVBAR)
-   ========================================================================== */
-/* Estilo base para todos los enlaces del menú */
-.nav-link-custom, .active-custom {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--texto-secundario) !important;
-    padding: 0.3rem 0.8rem !important;
-    transition: all 0.2s ease;
-}
-
-/* Estilo exclusivo para la pestaña activa (About Me) */
 .active-custom {
-    color: #ffffff !important;         
-    background-color: var(--acento-tech) !important; 
-    border-radius: 2px;             
+  background-color: var(--acento-tech);
+  color: white !important;
+  padding: 0.2rem 1rem !important;
+  border-radius: 4px;
 }
 
-/* Efecto hover sutil para los links que no están activos */
-.nav-link-custom:hover {
-    color: var(--acento-tech) !important;      
-}
+/* Hero Section */
+.hero-title { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; }
+.hero-subtitle { font-size: 1.25rem; color: var(--texto-secundario); margin-bottom: 2rem; }
 
-/* ==========================================================================
-   4. SECCIÓN PRINCIPAL (HERO SECTION) Y AVATAR
-   ========================================================================== */
-/* Sección Principal */
-.hero-section {
-    background-color: var(--bg-principal);
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-/* Título Principal (Grande y compacto) */
-.hero-title {
-    color: var(--texto-principal);
-    font-size: calc(1.5rem + 3vw); 
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    margin-bottom: 1rem;
-}
-
-/* Subtítulo */
-.hero-subtitle {
-    color: var(--texto-secundario);
-    font-size: 1.35rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-}
-
-/* Botón Minimalista */
-.hero-btn {
-    color: var(--texto-principal);
-    background-color: transparent;
-    border: 1px solid var(--texto-principal);
-    border-radius: 0 !important; 
-    padding: 0.6rem 2rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-/* Efecto Hover para el botón */
-.hero-btn:hover {
-    color: #ffffff;
-    background-color: var(--acento-tech);
-    border-color: var(--acento-tech);
-    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.2);
-}
-
-/* Contenedor de la columna derecha para centrar el círculo */
-.hero-img-container {
-    min-height: 500px;
-}
-
-/* Máscara Circular */
 .hero-img-wrapper {
-    width: 360px;                  
-    height: 360px;                 
-    border-radius: 50%;            
-    overflow: hidden;              
-    border: 4px solid var(--divisores); 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
-    background-color: var(--divisores);     
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Ajuste del zoom y la posición interna de tu foto */
-.hero-img-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;             
-    object-position: center 22%;   
-    transform: scale(1.6);         
-    transition: transform 0.3s ease;
-}
+.hero-img-avatar { width: 100%; height: 100%; object-fit: cover; }
 
-.hero-img-wrapper:hover .hero-img-avatar {
-    transform: scale(1.68);        
-}
-
-/* ==========================================================================
-   5. AJUSTES ESPECÍFICOS PARA CELULARES
-   ========================================================================== */
-@media (max-width: 767.98px) {
-    .hero-section {
-        padding-top: 3rem;
-        min-height: auto;
-    }
-    .hero-text-block {
-        margin-bottom: 2.5rem;
-    }
-    .hero-img-container {
-        min-height: auto;
-    }
-    .hero-img-wrapper {
-        width: 260px;
-        height: 260px;
-    }
-}
-
+/* Tarjetas */
 .about-card {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f7f3e8; /* Tu color Cyber Mint */
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.about-card:hover {
-  transform: translateY(-5px);
-}
-
-.about-img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  border: 4px solid #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.about-title {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #2d3748;
-  margin-bottom: 15px;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  color: #4a5568;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-.last-updated {
-  font-size: 0.85rem;
-  color: #a0aec0;
-  font-style: italic;
-}
-
-/* Ajuste responsivo */
-@media (max-width: 768px) {
-  .about-card {
-    text-align: center;
-    padding: 15px;
-  }
-}
-/* ==========================================================================
-   5. SECCIÓN DE TARJETAS (MINIMALISTA Y ESCALONADA)
-   ========================================================================== */
-
-.stack-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 4rem;              /* Espacio amplio para dar aire minimalista */
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 2rem;
-  align-items: flex-start;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  border: 1px solid var(--divisores);
 }
 
 .info-card {
-  background-color: var(--bg-principal);
-  /* Borde fino en lugar de grueso para un look más elegante */
+  background-color: white;
   border: 1px solid var(--divisores);
-  border-radius: 24px;    /* Esquinas más redondeadas para un look moderno */
-  padding: 3rem;          /* Mucho espacio interno */
-  width: 45%;
-  min-height: 280px;      /* Altura generosa */
-  box-shadow: 0 20px 40px rgba(0,0,0,0.03); /* Sombra ultra sutil */
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.card-offset {
-  margin-top: 100px;
-}
-
-/* Interacción minimalista: solo un pequeño levante */
 .info-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   border-color: var(--acento-tech);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
 }
 
-.info-card-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 2rem;    /* Icono arriba, separado del texto */
-  background: none;       /* Sin fondo para limpieza visual */
-  color: var(--acento-tech);
-  font-size: 2.5rem;
-}
-
-.info-card-body h5 {
-  font-size: 1.75rem;
-  font-weight: 600;       /* Menos peso que el 800 */
-  letter-spacing: -0.5px;
-  margin-bottom: 1rem;
-}
-
-.info-card-body p {
-  font-size: 1.1rem;
-  color: var(--texto-secundario);
-  line-height: 1.8;       /* Mayor interlineado para lectura minimalista */
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .mt-md-5 { margin-top: 2rem !important; }
 }
