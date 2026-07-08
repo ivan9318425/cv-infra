@@ -248,3 +248,62 @@ body {
     padding: 15px;
   }
 }
+/* ==========================================================================
+   5. SECCIÓN DE TARJETAS (MINIMALISTA Y ESCALONADA)
+   ========================================================================== */
+
+.stack-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;              /* Espacio amplio para dar aire minimalista */
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 2rem;
+  align-items: flex-start;
+}
+
+.info-card {
+  background-color: var(--bg-principal);
+  /* Borde fino en lugar de grueso para un look más elegante */
+  border: 1px solid var(--divisores);
+  border-radius: 24px;    /* Esquinas más redondeadas para un look moderno */
+  padding: 3rem;          /* Mucho espacio interno */
+  width: 45%;
+  min-height: 280px;      /* Altura generosa */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03); /* Sombra ultra sutil */
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-offset {
+  margin-top: 100px;
+}
+
+/* Interacción minimalista: solo un pequeño levante */
+.info-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--acento-tech);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+}
+
+.info-card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 2rem;    /* Icono arriba, separado del texto */
+  background: none;       /* Sin fondo para limpieza visual */
+  color: var(--acento-tech);
+  font-size: 2.5rem;
+}
+
+.info-card-body h5 {
+  font-size: 1.75rem;
+  font-weight: 600;       /* Menos peso que el 800 */
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.info-card-body p {
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+  line-height: 1.8;       /* Mayor interlineado para lectura minimalista */
+}
